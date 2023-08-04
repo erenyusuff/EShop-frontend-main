@@ -8,6 +8,7 @@ import {BoardUserComponent} from './board-user/board-user.component';
 import {BoardModeratorComponent} from './board-moderator/board-moderator.component';
 import {BoardAdminComponent} from './board-admin/board-admin.component';
 import {ProductsComponent} from "./products/products.component";
+import {CartComponent} from "./cart/cart.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'mod', component: BoardModeratorComponent},
   {path: 'admin', component: BoardAdminComponent},
   {path: 'products', component: ProductsComponent},
+  {path: 'cart', component: CartComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
