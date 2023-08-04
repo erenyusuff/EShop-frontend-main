@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
-import { StorageService } from '../_services/storage.service';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../_services/auth.service';
+import {StorageService} from '../_services/storage.service';
+import {ProfileComponent} from "../profile/profile.component";
+import {UserService} from "../_services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -14,12 +16,16 @@ export class LoginComponent implements OnInit {
   };
   isLoggedIn = false;
   isLoginFailed = false;
-  errorMessage = '';
+  errorMessage = 'hata';
   roles: string[] = [];
+  currentUser: any;
 
-  constructor(private authService: AuthService, private storageService: StorageService) { }
+
+  constructor(private authService: AuthService, private storageService: StorageService) {
+  }
 
   ngOnInit(): void {
+    this.currentUser = this.storageService.getUser().currentUser;
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
@@ -27,12 +33,11 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, password } = this.form;
+    const {username, password} = this.form;
 
     this.authService.login(username, password).subscribe({
       next: data => {
         this.storageService.saveUser(data);
-console.log(data)
         localStorage.setItem('Token', data.access_token)
         this.isLoginFailed = false;
         this.isLoggedIn = true;
@@ -49,4 +54,7 @@ console.log(data)
   reloadPage(): void {
     window.location.reload();
   }
+
+  protected readonly ProfileComponent = ProfileComponent;
+  protected readonly UserService = UserService;
 }

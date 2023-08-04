@@ -9,7 +9,7 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getPublicContent(): Observable<any> {
-    return this.http.get(environment.api + '/user', { responseType: 'text' });
+    return this.http.get(environment.api + '/users/logout', { responseType: 'text' });
   }
 
   getUserBoard(): Observable<any> {

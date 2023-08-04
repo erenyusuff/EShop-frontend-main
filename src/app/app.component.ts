@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { StorageService } from './_services/storage.service';
 import { AuthService } from './_services/auth.service';
 import { EventBusService } from './_shared/event-bus.service';
+import {ProductService} from "./_services/product.service";
 
 @Component({
   selector: 'app-root',
@@ -14,14 +15,15 @@ export class AppComponent {
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
-  username?: string;
+  username: string;
 
   eventBusSub?: Subscription;
 
   constructor(
     private storageService: StorageService,
     private authService: AuthService,
-    private eventBusService: EventBusService
+    private eventBusService: EventBusService,
+    private productService: ProductService,
   ) {}
 
   ngOnInit(): void {

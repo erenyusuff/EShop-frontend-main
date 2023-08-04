@@ -1,0 +1,27 @@
+<div class="Electronic">
+  <h1> </h1>
+  <table>
+    <thead>
+    <tr>
+
+      <div class="card text-white bg-dark mb-3 col-md-6 float-left col-md-6 float-right mx-2 my-2   "
+           style="width: auto;height: auto"
+           *ngFor="let item of productList">
+        <img class="card-img-top col my-4" style="width: 20rem;height: auto; border-radius: 20px;"
+             src="{{item.img}}"
+             alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.productName}}</h5>
+          <p class="card-text">{{item.price}}  </p>
+          <a href="/api/product" class="btn btn-primary">features</a>
+        </div>
+      </div>
+    </tr>
+    </thead>
+    <tbody>
+    <td>
+    </td>
+    </tbody>
+    <tbody></tbody>
+  </table>
+</div>

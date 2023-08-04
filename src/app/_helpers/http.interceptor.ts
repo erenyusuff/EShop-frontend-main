@@ -48,7 +48,6 @@ export class HttpRequestInterceptor implements HttpInterceptor {
   }
 
   private AddToken(req: any) {
-    console.log('test')
     return req.clone({
       headers: this.AddExtraHeaders(req.headers)
     })
