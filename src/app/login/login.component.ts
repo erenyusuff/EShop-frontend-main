@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private storageService: StorageService) {
   }
 
+
   ngOnInit(): void {
     this.currentUser = this.storageService.getUser().currentUser;
     if (this.storageService.isLoggedIn()) {
@@ -56,5 +57,4 @@ export class LoginComponent implements OnInit {
   }
 
   protected readonly ProfileComponent = ProfileComponent;
-  protected readonly UserService = UserService;
 }

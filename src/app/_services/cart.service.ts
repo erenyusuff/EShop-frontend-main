@@ -13,10 +13,10 @@ export class CartService {
 
 
   addToCart(payload: any) {
-    return this.http.put(environment.api + '/cart/addToCart', payload);
+    return this.http.put(environment.api + '/cart/current/addToCart', payload);
   }
 
-  getCartProducts(item: Cart) {
-    return this.http.get<Cart>(environment.api + '/cart/5');
+  getCartProducts(userId: number) {
+    return this.http.get<Cart>(environment.api + '/cart/'+userId+'/mycart');
   }
 }
