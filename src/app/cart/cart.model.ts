@@ -11,8 +11,18 @@ export interface Cart {
 
 
 export interface CartProducts {
-  img: string,
-  productName: string,
-  quantity: number,
-  price: number,
+  img: string;
+  productName: string;
+  quantity: number;
+  price: number;
+  product: product;
+}
+export interface product {
+  "productName": string;
+  "price": number;
+  "stock": number;
+  "description": string;
+  "img": string;
+  "category": string;
+  "id": number;
 }
