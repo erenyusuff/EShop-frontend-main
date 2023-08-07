@@ -1,12 +1,8 @@
 <div class="Electronic">
-  <div id="list-example" class="list-group col-md-12">
-    <a class="list-group-item list-group-item-action" href="products/Iphone">Iphone</a>
-    <a class="list-group-item list-group-item-action" href="products/mac">Mac</a>
-  </div>
   <h1></h1>
   <div class="container">
     <div class="card text-white bg-dark mb-3 col-md-6 float-left col-md-6 float-right mx-2 my-2  "
-         style="width: 21rem;height: 22rem"
+         style="width: 17rem;height: 20rem"
          *ngFor="let item of productList">
       <img class="card-img-top col my-4" style="width: 20rem;height: 10rem; border-radius: 15px;"
            src="{{item.img}}"
@@ -16,6 +12,15 @@
         <p class="card-text">{{item.price}}  </p>
         <a (click)="addToCart(item)" class="btn btn-primary">Sepete ekle</a>
       </div>
+    </div>
+    <div id="list-example" class="list-group col-md-2">
+      <a class="list-group-item list-group-item-action" href="products/applewatch">Apple Watch</a>
+      <a class="list-group-item list-group-item-action" href="products/mac">MacBook</a>
+      <a class="list-group-item list-group-item-action" href="products/airpods">Airpods</a>
+      <a class="list-group-item list-group-item-action" href="products/Iphone">Iphone</a>
+      <a class="list-group-item list-group-item-action" href="products/ipad">Ipad</a>
+
+
     </div>
   </div>
 </div>
