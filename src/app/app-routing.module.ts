@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'mod', component: BoardModeratorComponent},
   {path: 'admin', component: BoardAdminComponent},
   {path: 'products', component: ProductsComponent},
+  {path: 'products/:categoryName', component: ProductsComponent},
   {path: 'cart', component: CartComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

@@ -1,4 +1,4 @@
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import { product } from "src/app/products/products.model"
 import {environment} from "../../environments/environment";
@@ -12,7 +12,8 @@ export class ProductService {
   addProduct(data:product){
     return this.http.post(environment.api + 'products', data);
   }
-  productList(){
-    return this.http.get<product[]>(environment.api + '/products');
+  productList(categoryName: string | null){
+    const params = new HttpParams({fromString: 'category='+categoryName+''});
+    return this.http.get<product[]>(environment.api + '/products/category?'+params+'');
   }
 }

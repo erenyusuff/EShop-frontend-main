@@ -4,14 +4,14 @@
     <div class="row col-md-12"*ngFor="let cartProduct of cart.cartProducts">
       <div class="col-md-8">
         <div class="card-columns text-white bg-dark">
-          <img class="card-img-bottom col my-4 " style="width: 20rem;height: auto; border-radius: 20px;"
+          <img class="card-img-bottom col my-4 " style="width: 13rem;height: 7rem; border-radius: 20px;"
                src="{{cartProduct.product.img}}"
                alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{cartProduct.product.productName}}</h5>
             <p class="card-text"></p>
             <a href="/api/cart" class="btn btn-primary btn-sl">features</a>
-            <h5 class="card-footer"><p class="card-title">{{cartProduct.product.price}}</p></h5>
+            <h5 class="card-footer"><p class="card-title">price {{cartProduct.product.price* cartProduct.quantity}}</p></h5>
           </div>
         </div>
       </div>
