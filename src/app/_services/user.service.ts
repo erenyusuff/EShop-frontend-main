@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {environment} from "../../environments/environment";
+import {User} from "../board-user/user.model";
+import {product} from "../products/products.model";
 @Injectable({
   providedIn: 'root',
 })
@@ -13,9 +15,8 @@ export class UserService {
   }
 
   getUserBoard(): Observable<any> {
-    return this.http.get(environment.api + '/auth/profile', { responseType: 'text' });
+    return this.http.get<User[]>(environment.api + '/auth/profile');
   }
-
   getModeratorBoard(): Observable<any> {
     return this.http.get(environment.api + '/mod', { responseType: 'text' });
   }

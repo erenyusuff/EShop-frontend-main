@@ -1,5 +1,7 @@
 <div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container">
     <a href="#" class="navbar-brand">EShop</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
@@ -37,6 +39,10 @@
       <li class="nav-item">
         <a class="nav-item">{{ this.username }}</a>
       </li>
+<!--            <form class="form-inline my- my-lg-1">-->
+<!--              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
+<!--            </form>-->
       <li class="nav-item">
         <a href="/orders" class="nav-link" *ngIf="isLoggedIn" routerLink="Order">Orders</a>
       </li>
@@ -44,7 +50,9 @@
         <a href class="nav-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
+      </div>
   </nav>
+
 
   <div class="container">
     <router-outlet></router-outlet>

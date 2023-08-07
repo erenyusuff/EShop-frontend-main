@@ -2,7 +2,6 @@ import {Component, OnInit} from "@angular/core";
 import {ProductService} from "../_services/product.service";
 import {product} from "./products.model";
 import {CartService} from "../_services/cart.service";
-import {Cart} from "../cart/cart.model";
 
 @Component({
   selector: 'app-products',
@@ -28,14 +27,11 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(item: product) {
-
-    console.log('added item', item)
-    this.cartService.addToCart(6,{
+    this.cartService.addToCart({
       productId: item.id,
       quantity: 1,
-      cartId: 9
-    }).subscribe(response=>{
-      console.log('response', response);
+
+    }).subscribe(response => {
     })
   }
 }

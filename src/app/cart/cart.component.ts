@@ -1,20 +1,25 @@
 import {Component, OnInit} from "@angular/core";
-import {ProductService} from "../_services/product.service";
-import {product} from "../products/products.model";
+import {CartService} from "../_services/cart.service";
+import {Cart, CartProducts} from "./cart.model";
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  constructor(private product: ProductService) {
+  cart: Cart
+  cartProducts: CartProducts
+
+  constructor(private cartService: CartService) {
   }
 
   ngOnInit(): void {
-    this.product.productList().subscribe((result) => {
+    this.cartService.getCartProducts().subscribe((result) => {
       if (result) {
+        this.cart = result;
       }
     })
   }
-
 }
+
