@@ -17,6 +17,8 @@ import {httpInterceptorProviders} from './_helpers/http.interceptor';
 import {CommonModule} from "@angular/common";
 import {ProductsComponent} from "./products/products.component";
 import {CartComponent} from "./cart/cart.component";
+import { SuccessComponent } from './success/success.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import {CartComponent} from "./cart/cart.component";
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
+    SuccessComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
