@@ -1,0 +1,12 @@
+<div class="Electronic">
+  <div class="container">
+    <div class="card"*ngFor="let item of order">
+      <h5 class="card-header">{{item.id}} Nolu sipariş</h5>
+      <div class="card-body">
+        <h5 class="card-title">{{item.price}} ₺ </h5>
+        <p class="card-text"></p>
+        <a href="/api/orders/{{item.id}}" class="btn btn-primary">Sipariş Detayları</a>
+      </div>
+    </div>
+  </div>
+</div>

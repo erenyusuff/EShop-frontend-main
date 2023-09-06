@@ -9,6 +9,8 @@ import {BoardModeratorComponent} from './board-moderator/board-moderator.compone
 import {BoardAdminComponent} from './board-admin/board-admin.component';
 import {ProductsComponent} from "./products/products.component";
 import {CartComponent} from "./cart/cart.component";
+import {SuccessComponent} from "./success/success.component";
+import {OrdersComponent} from "./orders/orders.component";
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'products', component: ProductsComponent},
   {path: 'products/:categoryName', component: ProductsComponent},
   {path: 'cart', component: CartComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'}
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'bought', component: SuccessComponent},
+  {path: 'orders', component: OrdersComponent},
 ];
 
 @NgModule({
