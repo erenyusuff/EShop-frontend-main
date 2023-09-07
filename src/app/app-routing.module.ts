@@ -11,6 +11,7 @@ import {ProductsComponent} from "./products/products.component";
 import {CartComponent} from "./cart/cart.component";
 import {SuccessComponent} from "./success/success.component";
 import {OrdersComponent} from "./orders/orders.component";
+import {ProductManagementComponent} from "./product-management/product-management.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'mod', component: BoardModeratorComponent},
   {path: 'admin', component: BoardAdminComponent},
   {path: 'products', component: ProductsComponent},
+  {path: 'products/list', component: ProductManagementComponent},
   {path: 'products/:categoryName', component: ProductsComponent},
   {path: 'cart', component: CartComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},

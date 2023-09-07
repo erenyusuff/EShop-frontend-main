@@ -1,0 +1,63 @@
+<div class="container">
+  <legend>a</legend>
+  <div class="row">
+    <div class="col col-md-8" style="overflow-y: scroll; max-height: 100vh">
+      <form [formGroup]="productForm" (dblclick)="addProduct()">
+        <div class="mb-3">
+          <label for="productName" class="form-label">productName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            formControlName="productName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            formControlName="price"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="stock" class="form-label">stock</label>
+          <input
+            type="number"
+            class="form-control"
+            id="stock"
+            formControlName="stock"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            formControlName="description"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">image</label>
+          <input
+            type="text"
+            class="form-control"
+            id="img"
+            formControlName="img"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="category" class="form-label">category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            formControlName="category"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

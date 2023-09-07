@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -19,6 +19,7 @@ import {ProductsComponent} from "./products/products.component";
 import {CartComponent} from "./cart/cart.component";
 import { SuccessComponent } from './success/success.component';
 import { OrdersComponent } from './orders/orders.component';
+import { ProductManagementComponent } from './product-management/product-management.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +35,16 @@ import { OrdersComponent } from './orders/orders.component';
     BoardUserComponent,
     SuccessComponent,
     OrdersComponent,
+    ProductManagementComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    CommonModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        CommonModule,
+        ReactiveFormsModule
+    ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
