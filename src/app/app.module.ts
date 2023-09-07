@@ -20,6 +20,7 @@ import {CartComponent} from "./cart/cart.component";
 import { SuccessComponent } from './success/success.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductManagementComponent } from './product-management/product-management.component';
+import { StatisticComponent } from './statistic/statistic.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProductManagementComponent } from './product-management/product-managem
     SuccessComponent,
     OrdersComponent,
     ProductManagementComponent,
+    StatisticComponent,
   ],
     imports: [
         BrowserModule,
