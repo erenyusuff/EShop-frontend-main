@@ -1,8 +1,11 @@
 <div class="container">
-  <legend>a</legend>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of Product">{{item.productName}} <button (click)="deleteProduct(item.id)">Delete</button></li>
+  </ul>
+  <legend>Product Creating</legend>
   <div class="row">
     <div class="col col-md-8" style="overflow-y: scroll; max-height: 100vh">
-      <form [formGroup]="productForm" (dblclick)="addProduct()">
+      <form [formGroup]="productForm">
         <div class="mb-3">
           <label for="productName" class="form-label">productName</label>
           <input
@@ -60,4 +63,5 @@
       </form>
     </div>
   </div>
+  <button (click)="addProduct()" style="height: 3rem;width: 27rem; background-color: aquamarine" >Add Product</button>
 </div>

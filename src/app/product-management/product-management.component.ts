@@ -20,8 +20,7 @@ export class ProductManagementComponent implements OnInit {
     createdAt : new FormControl(''),
     updatedAt : new FormControl(''),
   });
-  preview: string = '';
-  Product: product
+  Product: product | any
 
   constructor(private productManagementService: ProductManagementService) {
   }
@@ -50,4 +49,9 @@ export class ProductManagementComponent implements OnInit {
       updatedAt
     }).subscribe()
   }
+deleteProduct(id: any): void {
+    this.productManagementService.deleteProducts(id).subscribe()
+}
+
+  protected readonly ProductManagementService = ProductManagementService;
 }

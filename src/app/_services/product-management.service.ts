@@ -16,6 +16,9 @@ export class ProductManagementService {
   getProducts() {
     return this.http.get<product>(environment.api + '/products');
   }
+  deleteProducts(id: number) {
+    return this.http.delete<product>(environment.api + '/products/'+id+'');
+  }
   addProduct(payload:any ): Observable<any> {
     return this.http.post(
       environment.api + '/products',
