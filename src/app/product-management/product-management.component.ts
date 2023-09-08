@@ -54,4 +54,6 @@ deleteProduct(id: any): void {
 }
 
   protected readonly ProductManagementService = ProductManagementService;
+  protected readonly ondblclick = ondblclick;
+  protected readonly window = window;
 }

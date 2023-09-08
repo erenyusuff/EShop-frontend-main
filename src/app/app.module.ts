@@ -12,15 +12,16 @@ import {ProfileComponent} from './profile/profile.component';
 import {BoardAdminComponent} from './board-admin/board-admin.component';
 import {BoardModeratorComponent} from './board-moderator/board-moderator.component';
 import {BoardUserComponent} from './board-user/board-user.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {httpInterceptorProviders} from './_helpers/http.interceptor';
 import {CommonModule} from "@angular/common";
 import {ProductsComponent} from "./products/products.component";
 import {CartComponent} from "./cart/cart.component";
-import { SuccessComponent } from './success/success.component';
-import { OrdersComponent } from './orders/orders.component';
-import { ProductManagementComponent } from './product-management/product-management.component';
-import { StatisticComponent } from './statistic/statistic.component';
+import {SuccessComponent} from './success/success.component';
+import {OrdersComponent} from './orders/orders.component';
+import {ProductManagementComponent} from './product-management/product-management.component';
+import {StatisticComponent} from './statistic/statistic.component';
+import {SearchComponent} from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -38,15 +39,17 @@ import { StatisticComponent } from './statistic/statistic.component';
     OrdersComponent,
     ProductManagementComponent,
     StatisticComponent,
+    SearchComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule,
-        CommonModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
+  ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })

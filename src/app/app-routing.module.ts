@@ -13,6 +13,7 @@ import {SuccessComponent} from "./success/success.component";
 import {OrdersComponent} from "./orders/orders.component";
 import {ProductManagementComponent} from "./product-management/product-management.component";
 import {StatisticComponent} from "./statistic/statistic.component";
+import {SearchComponent} from "./search/search.component";
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'bought', component: SuccessComponent},
   {path: 'orders', component: OrdersComponent},
   {path: 'statistics', component: StatisticComponent},
+  {path: 'search', component: SearchComponent},
 ];
 
 @NgModule({

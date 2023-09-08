@@ -1,35 +1,55 @@
 <div class="Electronic">
   <div class="container d-flex">
     <div class="container d-flex flex-column">
-    <div class=""*ngFor="let cartProduct of cart.cartProducts">
-      <div class="">
-        <div class="card-columns text-white bg-dark" style="border-radius: 1rem">
-          <img class="card-img-bottom col my-4 " style="width: 13rem;height: 7rem;"
-               src="{{cartProduct.product.img}}"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{cartProduct.product.productName}}</h5>
-            <p class="card-text">{{cartProduct.product.price* cartProduct.quantity}} $</p>
-            <a href="/api/cart" class="btn btn-primary btn-sl">features</a>
+      <div class="" *ngFor="let cartProduct of cart?.cartProducts">
+        <div class="">
+          <div class="card-columns text-white bg-dark" style="border-radius: 1rem">
+            <img class="card-img-bottom col my-4 " style="width: 13rem;height: 7rem;"
+                 src="{{cartProduct.product.img}}"
+                 alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{cartProduct.product.productName}}</h5>
+              <p class="card-text">{{cartProduct.product.price * cartProduct.quantity}} $</p>
+              <a href="/api/cart" class="btn btn-primary btn-sl">features</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
     <div class="">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Cart</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
         </div>
-        <ul class="list-group list-group-flush"*ngFor="let cartProduct of cart.cartProducts">
+        <ul class="list-group list-group-flush" *ngFor="let cartProduct of cart?.cartProducts">
           <li class="list-group-item">{{cartProduct.product.productName}}</li>
         </ul>
         <div class="card-body">
-          <a (click)="buyCart()"href="bought"nasi class="btn btn-primary" style="width: 250px">Buy</a>
+          <a (click)="buyCart()" class="btn btn-primary" style="width: 250px">Buy</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+sdaf
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is example from ItSolutionStuff.com
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
 
